@@ -7,12 +7,6 @@ class UserProfile extends StatelessWidget {
       backgroundColor: Color(0xffffffff),
       appBar: AppBar(
         backgroundColor: Color(0xffad32fe),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            // Navigate back
-          },
-        ),
         title: GestureDetector(
           onTap: () {
             Navigator.of(context).pushReplacementNamed('/home');
@@ -77,7 +71,7 @@ class UserProfile extends StatelessWidget {
               },
               child: CircleAvatar(
                 radius: 60,
-                backgroundImage: AssetImage("images/profile-user.jpg"),
+                backgroundImage: AssetImage("assets/profilePicture1.png"),
               ),
             ),
             SizedBox(height: 10),
