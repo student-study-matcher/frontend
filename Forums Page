@@ -80,7 +80,6 @@ class _ForumsState extends State<Forums> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.article), label: "Forums"),
           BottomNavigationBarItem(icon: Icon(Icons.message), label: "Messages"),
           BottomNavigationBarItem(icon: Icon(Icons.account_box), label: "Profile"),
