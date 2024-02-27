@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'HomeScreen.dart';
+import 'Forums.dart';
+
 
 class UserProfile extends StatelessWidget {
   @override
@@ -7,6 +9,7 @@ class UserProfile extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xffffffff),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xffad32fe),
         title: GestureDetector(
           onTap: () {
@@ -39,17 +42,33 @@ class UserProfile extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.article),
-            label: 'Forums',
+            label: "Forums",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
-            label: 'Messages',
+            label: "Messages",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
-            label: 'Profile',
+            label: "Profile",
           ),
         ],
+        onTap: (int index) {
+          // Handle bottom navigation item taps
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Forums()),
+            );
+          } else if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => UserProfile()),
+            );
+          } else if (index == 2) {
+
+          }
+        },
         backgroundColor: Color(0xffae32ff),
         elevation: 8,
         selectedItemColor: Color(0xffffffff),
@@ -59,7 +78,7 @@ class UserProfile extends StatelessWidget {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
-        onTap: (value) {},
+
       ),
       body: SingleChildScrollView(
         child: Column(
